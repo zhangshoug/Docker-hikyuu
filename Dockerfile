@@ -34,8 +34,17 @@ ENV PATH=/opt/conda/bin:/usr/local/bin:$PATH  \
  LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 #RUN conda config --add channels conda-forge
+#RUN conda update -y conda \
+#  &&  conda install -y libgcc
+#RUN conda config --add channels conda-forge
+RUN conda config --add channels 'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/'
+RUN conda config --add channels 'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/'
+RUN conda config --add channels 'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r/'
+RUN conda config --add channels 'https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro/'
+RUN conda config --set show_channel_urls yes
 RUN conda update -y conda \
-  &&  conda install -y libgcc
+  &&  conda install -y libgcc mysql-python
+
 
 #RUN  echo 'export PATH=/opt/conda/bin:$PATH'  > /etc/profile.d/conda.sh && mkdir $fasiondoghome
 WORKDIR $fasiondoghome
