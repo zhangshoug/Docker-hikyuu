@@ -13,7 +13,8 @@ log4c="log4cplus-1.2.1-rc2.tar.gz"
 #[ ! -d hikyuu ] && git clone https://git.oschina.net/fasiondog/hikyuu.git &
 [ ! -d hikyuu ] && git clone https://github.com/fasiondog/hikyuu.git &
 [ -d hikyuu ] && echo "git pull hikyuu .........." && cd hikyuu && git pull && cd ..
-[ ! -f sh/conda3.sh ] && wget -c -O sh/conda3.sh https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh && chmod a+x conda3.sh
+#[ ! -f sh/conda3.sh ] && wget -c -O sh/conda3.sh https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh && chmod a+x conda3.sh
+[ ! -f sh/conda3.sh ] && wget -c -O sh/conda3.sh https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-4.4.0-Linux-x86_64.sh && chmod a+x conda3.sh
 
 [ -d archives ] && rm -rf lock partial
 [ ! -d archives ] && mkdir archives
