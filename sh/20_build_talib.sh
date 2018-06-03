@@ -25,7 +25,9 @@ fi
 
 echo ".............................. pip install ta-lib"
 
-pip install ta-lib
-pip install pyperclip
+#pip install ta-lib
+#pip install pyperclip
+pip install ta-lib -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install pyperclip -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 echo done ................................. $0
